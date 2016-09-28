@@ -1,0 +1,34 @@
+swagger: "2.0"
+info:
+  version: 1.1.0
+  title: Express Swagger Skeleton
+  description: Sample routes
+basePath: /api/v1
+tags:
+  - name: Examples
+    description: Simple example endpoints
+
+consumes:
+  - application/json
+produces:
+  - application/json
+
+paths:
+  /examples:
+    get:
+      tags:
+        - Examples
+      description: Fetch all examples
+      responses:
+        200:
+          description: Returns all examples
+
+  /examples/{id}:
+    get:
+      tags:
+        - Examples
+      responses:
+        200:
+          description: Return the example with the specified id
+        404:
+          description: Example not found

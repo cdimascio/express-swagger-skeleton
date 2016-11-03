@@ -27,6 +27,12 @@ paths:
     get:
       tags:
         - Examples
+      parameters:
+        - name: id
+          in: path
+          required: true
+          description: The id of the entity to retrieve
+          type: integer
       responses:
         200:
           description: Return the example with the specified id

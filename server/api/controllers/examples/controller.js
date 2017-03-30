@@ -7,13 +7,18 @@ export class Controller {
   }
 
   byId(req, res) {
-    if (req.params.id > 1 || req.params.id < 0) {
-      res.status(404).end()
-    } else {
-      ExamplesService
-        .byId(req.params.id)
-        .then(r => res.json(r));
-    }
+    ExamplesService
+      .byId(req.params.id)
+      .then(r => {
+        if (r) res.json(r)
+        else res.status(404).end();
+      });
   }
+
+  create(req, res) {
+    ExamplesService
+      .create(req.body.name)
+      .then(r => res.status(201).location(`/api/v1/examples/${r.id}`).end())
+  } 
 }
 export default new Controller();

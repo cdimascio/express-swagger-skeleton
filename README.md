@@ -1,5 +1,7 @@
 # express-swagger-skeleton
 
+### ** Deprecated ** Use [generator-express-no-stress](https://github.com/cdimascio/generator-express-no-stress)
+
 Sick of writing validation code for you REST APIs? No worries, just create the Swagger docs, and this project will automatically validate all of your requests according to the Swagger doc!!!
 
 A *simple* application skeleton that gets you up and running with **Express**, **Swagger**, **Bunyan** and **ES2015** *in no time*!
